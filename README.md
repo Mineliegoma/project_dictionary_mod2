@@ -1,24 +1,20 @@
-# README
+# Quote of the Day
+* Users will be able to save their favorite quotes with this app.
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Domain Modeling
+ User --< UserQuote >-- Quote
 
-Things you may want to cover:
+### Attributes
+* User: name (str)
+* UserQuote: user_id (int), quote_id(int)
+* Quote: author (str), body (str)
 
-* Ruby version
+### User Stories
+Users will be able to:
+* Have a homepage with their favorite quotes
+* Be able to browse new quotes
+* Be able to add and remove favorite quotes
+* Look up definitions of words via search
+* View the Quote of the Day upon login
+* Watch an ad, after adding a 10th word to its favorite list
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
