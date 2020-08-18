@@ -20,6 +20,15 @@ class UsersController < ApplicationController
         @quotes = @user.quotes
     end 
 
+    # def remove_favorite
+    #     @user = User.find(params[:id]
+    #     @quote = Quote.find(params[:quote_id])
+    #     @user.remove_quote(@quote)
+
+    #     redirect_to favorite_quotes_path
+    # end
+
+
 
     private
     def user_params

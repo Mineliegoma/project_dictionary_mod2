@@ -13,7 +13,7 @@ class User < ApplicationRecord
     end
 
     
-    def remove_favorite(quote)
+    def remove_quote(quote)
         self.favorites.delete_if {|favorite| favorite.quote_id == quote.id}
     end
 
