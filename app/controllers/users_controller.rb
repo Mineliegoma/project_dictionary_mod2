@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-
+    
     def new 
         @user = User.new
     end 
@@ -18,10 +18,7 @@ class UsersController < ApplicationController
     def favorites
         @user = User.find(params[:id])
         @quotes = @user.quotes
-
     end 
-
-
 
 
     private

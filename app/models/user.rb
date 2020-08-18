@@ -10,29 +10,19 @@ class User < ApplicationRecord
 
     def random_quotes
         Quote.all.sample(10)
-
     end
 
     
-    def remove_favorite
-
+    def remove_favorite(quote)
+        self.favorites.delete_if {|favorite| favorite.quote_id == quote.id}
     end
 
     def list_favorites
-
         self.quotes
-
     end
 
     def self.quote_of_day
         Quote.all.sample
-
     end 
-
-
-
-
-
-
 
 end

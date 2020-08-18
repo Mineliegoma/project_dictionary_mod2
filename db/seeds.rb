@@ -7,6 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 User.delete_all
 Quote.delete_all 
+Favorite.delete_all
 
 
 
@@ -17,4 +18,8 @@ end
 
 20.times do
     Quote.create(author: Faker::Name.name , content:  Faker::Quote.yoda )
+end
+
+20.times do
+    Favorite.create(user_id: User.all.sample.id, quote_id: Quote.all.sample.id)
 end
