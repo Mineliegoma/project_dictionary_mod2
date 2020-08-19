@@ -11,9 +11,13 @@ Favorite.delete_all
 
 
 
-5.times do
-    
-User.create(name: Faker::Name.name , password: Faker::Number.number(digits: 3))
+30.times do
+    user = User.new
+    user.name = Faker::Name.name
+    user.email = Faker::Internet.email
+    user.password = "123456"
+    user.password_confirmation = "123456"
+    user.save!
 end
 
 20.times do
